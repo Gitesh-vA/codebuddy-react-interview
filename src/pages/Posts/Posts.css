@@ -1,0 +1,101 @@
+/* Container for the entire posts section */
+.posts-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Grid container to hold the post cards */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Individual post card styling */
+  .post-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Post image styling */
+  .post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Content section of the post card */
+  .post-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Author section containing avatar and name */
+  .post-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Avatar image styling */
+  .avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  /* Author name styling */
+  .author-name {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* Post writeup styling */
+  .post-writeup {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Responsive design for different screen sizes */
+  
+  /* Medium screens: 2 posts per row */
+  @media (max-width: 992px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Small screens: 1 post per row */
+  @media (max-width: 600px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .post-image {
+      height: 150px;
+    }
+  
+    .author-name {
+      font-size: 16px;
+    }
+  
+    .post-writeup {
+      font-size: 14px;
+    }
+  }
+  
